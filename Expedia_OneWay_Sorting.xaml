@@ -1,0 +1,180 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Expedia_OneWay_Sorting" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1139.2,1344" sap2010:WorkflowViewState.IdRef="Expedia_OneWay_Sorting_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Expedia_OneWay_Sorting" sap:VirtualizedContainerService.HintSize="512,1279.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt_Output" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome DED to DEL flights" sap:VirtualizedContainerService.HintSize="449.6,1190.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="92f1f453-e76f-4fb5-9776-e15e150c23ea" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,950.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Direct (1)'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="92f1f453-e76f-4fb5-9776-e15e150c23ea" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/Flights-Search?flight-type=on&amp;mode=search&amp;trip=oneway&amp;leg1=from:Dehradun,%20India%20(DED-Jolly%20Grant),to:New%20Delhi,%20National%20Capital%20Territory%20of%20Delhi,%20India,departure:01/08/2024TANYT,fromType:A,toType:C&amp;options=cabinclass:economy&amp;fromDate=01/08/2024&amp;d1=2024-8-1&amp;passengers=adults:1,infantinlap:N" ContentHash="2asSEpodxEaD4vBwYufZdA" DesignTimeRectangle="214, 542, 22, 23" DesignTimeScaleFactor="1.25" ElementType="CheckBox" FullSelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='checkbox' class='uitk-layout-flex-item uitk-layout-flex-item-flex-shrink-0' aaname=' Direct (*)' /&gt;" Guid="fd035f0d-b92e-43cf-baf8-4760a7de9113" ImageBase64="" InformativeScreenshot="1b8fdbe0640e88d916a088764f802f6e.png" Reference="oghGY3lEJESxLaOejJVMcA/5mz3HFIC8ki8UuNz_GYU-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='DED to DEL flights' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="246, 542, 202, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl class='uitk-checkbox-label-content' parentid='app-layer-base' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='uitk-checkbox-label-content' parentid='app-layer-base' tag='SPAN' type='' aaname=' Direct (*)' /&gt;" Guid="9622257b-810d-42ae-b2ee-795dbe974572" ImageBase64="" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NSelectItem DisplayName="Select Item 'Recommended'" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Price (lowest to highest)" ScopeIdentifier="92f1f453-e76f-4fb5-9776-e15e150c23ea" Version="V3">
+              <uix:NSelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="9">
+                  <x:String>Recommended</x:String>
+                  <x:String>Price (lowest to highest)</x:String>
+                  <x:String>Price (highest to lowest)</x:String>
+                  <x:String>Duration (shortest)</x:String>
+                  <x:String>Duration (longest)</x:String>
+                  <x:String>Departure (earliest)</x:String>
+                  <x:String>Departure (latest)</x:String>
+                  <x:String>Arrival (earliest)</x:String>
+                  <x:String>Arrival (latest)</x:String>
+                </scg:List>
+              </uix:NSelectItem.Items>
+              <uix:NSelectItem.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/Flights-Search?filters=%5B%7B%22numOfStopFilterValue%22%3A%7B%22stopInfo%22%3A%7B%22numberOfStops%22%3A0%2C%22stopFilterOperation%22%3A%22EQUAL%22%7D%7D%7D%5D&amp;leg1=from%3ADehradun%2C%20India%20%28DED-Jolly%20Grant%29%2Cto%3ANew%20Delhi%2C%20National%20Capital%20Territory%20of%20Delhi%2C%20India%2Cdeparture%3A01%2F08%2F2024TANYT%2CfromType%3AA%2CtoType%3AU&amp;mode=search&amp;options=carrier%3A%2Ccabinclass%3A%2Cmaxhops%3A1%2Cnopenalty%3AN&amp;passengers=adults%3A1%2Cchildren%3A0%2Cinfantinlap%3AN&amp;trip=oneway" ContentHash="bVmqAIr7NUeG8ddQTzT_lQ" DesignTimeRectangle="1192, 620, 287, 60" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='sort-filter-dropdown-SORT' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sort-filter-dropdown-SORT' tag='SELECT' type='' class='uitk-field-select' aaname='Sort by' /&gt;" Guid="ed53ebe3-1c6c-490f-97ad-60163a038c9d" InformativeScreenshot="d747ce9710187b88541eac459dacedd4.png" Reference="oghGY3lEJESxLaOejJVMcA/MaUyCptvH06nTivPkg-APg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='DED to DEL flights' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NSelectItem.Target>
+            </uix:NSelectItem>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[dt_Output]" DisplayName="Extract Table Data 'Extract Table Data'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Pricing'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Duration'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Timing'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='section' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="Rows" MaximumResults="5" ScopeIdentifier="92f1f453-e76f-4fb5-9776-e15e150c23ea" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/Flights-Search?filters=%5B%7B%22numOfStopFilterValue%22%3A%7B%22stopInfo%22%3A%7B%22numberOfStops%22%3A0%2C%22stopFilterOperation%22%3A%22EQUAL%22%7D%7D%7D%5D&amp;leg1=from%3ADelhi%20%28DEL%20-%20Indira%20Gandhi%20Intl.%29%2Cto%3APune%20%28PNQ%20-%20Lohegaon%29%2Cdeparture%3A01%2F08%2F2024TANYT%2CfromType%3AU%2CtoType%3AA&amp;mode=search&amp;options=carrier%3A%2Ccabinclass%3A%2Cmaxhops%3A1%2Cnopenalty%3AN&amp;pageId=0&amp;passengers=adults%3A1%2Cchildren%3A0%2Cinfantinlap%3AN&amp;sortOrder=INCREASING&amp;sortType=PRICE&amp;trip=oneway" ContentHash="JsEyhqhaKkqIbcEqr0_VFw" DesignTimeRectangle="531, 710, 948, 1255" DesignTimeScaleFactor="1.25" ElementType="List" FullSelectorArgument="&lt;webctrl aria-role='list' tag='UL' /&gt;" Guid="78d64ba1-b056-4c67-91af-900cf442969b" InformativeScreenshot="5002baa98c2dcf3d4e13c7794e2a7b03.png" Reference="oghGY3lEJESxLaOejJVMcA/MrrIQbMCQ0yJniiWk2YOHg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='DEL to PNQ flights' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_Output]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="353.6,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="One Way" WorkbookPath="Output.xlsx" />
+            <uix:NNavigateBrowser DisplayName="Navigate Browser - Go Back" sap:VirtualizedContainerService.HintSize="353.6,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="mKTg49FROkybuWVG12Wrhw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGsSURBVDhPpZPNLgNRHMU9QSMhGl87tIhK7kyqM7NBqI+FsGms2HkBL1BrXoEHsPWVSBASy6JE4nvBgoikFUKQzvE/V6etpJ1ILE5m7v3f85tz7/1PVe5SBURzokcR/iiupSdAAF/eRbqIa3+5VwUIPUkCHjjhij7PFc63DBytm0iXEedv9w0PQN0T4HLweaawOB9FV8RGS8hBa7iotnYb4Q5bP0fiFu4Egp8kOQJ0tNSKicSEhaEBC8ODRY0OWYh02wg2Owg2OQgJ5HjD1B5+XAOot1OF7JGB57Qq6PVEYW/ZhG3ZqGsUgEDCnRUAFA/IE24UDtdM9PdaqG1wNKRLkoRkKxUBnlg8WDXRJ+aaekdDdiUJ988z8QXw66VmPpnkRbbDM/EF0PwhtzE9GUN13Y+ZMG4nK2fiC/iSHsgcGnhKGUjO9miINstCgn0BHFzuGBgbtTAzFdMQJqGRdQ8QlyvmlV5sSx+UAFwOTjdNKMPWECbxzB4gI1ecGLewtBDVafM13Ui6ldkHhDBJyYKCWGez6WTFed3KhZ+JSfLRysr9XaNnjoB//M4q8A3mjqnICHwMtAAAAABJRU5ErkJggg==" InformativeScreenshot="63238d81e9bba47072930c4ff5f86feb.jpg" Reference="oghGY3lEJESxLaOejJVMcA/8Hh9UN5lE0G-538og9rtfg" Selector="&lt;html app='chrome.exe' title='*flights' /&gt;" Title="DED to DEL flights" Url="https://www.expedia.co.in/Flights-Search?*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,590 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Expedia_OneWay_SearchPage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1831,6248</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="688,6183" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Expedia Travel Vacations, Cheap Flight" sap:VirtualizedContainerService.HintSize="626,6095" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5855" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="str_FirstDate" />
+              <Variable x:TypeArguments="x:String" Name="str_FlyingFrom" />
+              <Variable x:TypeArguments="x:String" Name="str_FlyingTo" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Adults" />
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterAdult" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Children" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Infant" />
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterChild" />
+              <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterInfant" />
+              <Variable x:TypeArguments="x:String" Name="str_DepartureDate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,303" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_FlyingFrom]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying From").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_FlyingTo]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying To").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Adults]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[CInt(in_TransactionItem.SpecificContent("Adult").ToString)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Children]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[CInt(in_TransactionItem.SpecificContent("Child").ToString)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Infant]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[CInt(in_TransactionItem.SpecificContent("Infant").ToString)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[str_DepartureDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Departing Date").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'One-way'" sap:VirtualizedContainerService.HintSize="530,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="t1Bk2DsuXEqNqoWtntk81Q" DesignTimeRectangle="380, 526, 74, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='One-way' parentid='search_form_product_selector_flights' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='One-way' parentid='search_form_product_selector_flights' tag='SPAN' type='' class='uitk-tab-text' check:innerText='One-way' /&gt;" Guid="c027c0b4-8b9e-4406-adbd-1661573a5f3c" ImageBase64="" InformativeScreenshot="34facbeb780e97fa7ce482d06d970967.png" Reference="oghGY3lEJESxLaOejJVMcA/KybG8giHJU2g9-XY9TKnaQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Leaving from'" sap:VirtualizedContainerService.HintSize="530,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="wS4IrzWjLECQaLLlqh6ujQ" DesignTimeRectangle="294, 612, 117, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl class='uitk-field-label' parentid='FlightSearchForm_*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='uitk-field-label' parentid='FlightSearchForm_*' tag='DIV' type='' aaname='Leaving from' check:innerText='Leaving from' /&gt;" Guid="dc67919f-1e36-4152-8b7f-89a6020e498e" ImageBase64="" InformativeScreenshot="5cdaba7e71efb4571d617d2345de88fd.png" Reference="oghGY3lEJESxLaOejJVMcA/Si605K2QTki_fe0if8C3Vg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into Departure Station" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="530,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Text="[str_FlyingFrom]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="TbM1KftqAUmdwqp0KYqDbg" DesignTimeRectangle="239, 595, 468, 90" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='origin_select' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='origin_select' tag='INPUT' type='text' class='uitk-field-input has-input-cta uitk-typeahead-input uitk-typeahead-input-v2' placeholder='Leaving from' aaname='Leaving from' /&gt;" Guid="a6161b42-15e9-48f3-b854-c432297c65ca" ImageBase64="" InformativeScreenshot="82a612e5ec66e29695c10a47fd6b7ed8.png" Reference="oghGY3lEJESxLaOejJVMcA/ePRWodqrUk-mj7mhXqdsTg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clicking on Departure Station" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" CVScreenId="2abb4dbb-06e6-47d2-9ecf-5e1e1b89519b" ContentHash="hmsJ_lPuh0mpWEC1rM0fcw" CvTextArea="307, 559, 301, 21" CvTextArgument="Hyderabad (HYD - Rajiv Gandhi Intl.)" CvType="Text" DesignTimeRectangle="239, 542, 468, 75" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='uitk-button uitk-button-medium uitk-button-fullWidth has-subtext origin_select-result-item-button result-item-button' parentid='origin_select-menu' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='uitk-button uitk-button-medium uitk-button-fullWidth has-subtext origin_select-result-item-button result-item-button' parentid='origin_select-menu' aaname='' /&gt;" Guid="0446f218-0116-4044-9b20-6d9cbd688a0d" InformativeScreenshot="f58165c7266d8d716d7d786799babadc.png" Reference="oghGY3lEJESxLaOejJVMcA/dY4jBoHcXkiekPP0ZqCAfw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Going to'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="EnR5xFJUhEOm2E2Xvk-hnQ" DesignTimeRectangle="664, 492, 80, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Going to' class='uitk-field-label' parentid='FlightSearchForm_*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Going to' class='uitk-field-label' parentid='FlightSearchForm_ONE_WAY' tag='DIV' type='' check:innerText='Going to' /&gt;" Guid="538c3832-9b59-4523-85b0-da9709725f30" ImageBase64="" InformativeScreenshot="4829fedc3c1134631294f1cfb72bc757.png" Reference="oghGY3lEJESxLaOejJVMcA/a2acYAUHSU6oV0Pr1_UeJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type into Arrival Destination" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="529.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Text="[str_FlyingTo]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="hiQWT3ce9kK61FA3dCI41Q" DesignTimeRectangle="609, 475, 468, 90" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='destination_select' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='destination_select' tag='INPUT' type='text' class='uitk-field-input uitk-typeahead-input uitk-typeahead-input-v2' placeholder='Going to' aaname='Going to' /&gt;" Guid="c77e2d8f-cc11-4032-b50c-45469d1be858" ImageBase64="" InformativeScreenshot="0b4bbf039ab643d02fcbab1baf39bf23.png" Reference="oghGY3lEJESxLaOejJVMcA/7tYuIAU9E0KekR1HASQAoQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clicking on Arrival Station" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" ContentHash="Ri_GBVTpcU-rgovK3ms7NA" DesignTimeRectangle="679, 557, 323, 23" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl parentid='destination_select-menu' tag='DIV' parentclass='uitk-layout-flex-item uitk-typeahead-button-label typeahead-custom-truncate custom-typeahead-label' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='destination_select-menu' tag='DIV' parentclass='uitk-layout-flex-item uitk-typeahead-button-label typeahead-custom-truncate custom-typeahead-label' type='' class='uitk-text truncate uitk-type-300 uitk-text-default-theme' aaname='' check:text='Ahmedabad (AMD - Sardar Vallabhbhai Patel Intl.)' /&gt;" Guid="a4643cee-22e9-4639-91f3-4d95d190c959" ImageBase64="" InformativeScreenshot="86fe98995c0d5576a69a4210162dad55.png" Reference="oghGY3lEJESxLaOejJVMcA/DWeTdtYyL0SGa5PyEuU0Rg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <Assign sap:VirtualizedContainerService.HintSize="529.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_FirstDate]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Now.AddDays(12).ToString("d/MM/yyyy").Split("/"c)(0)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '14 Aug'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" ContentHash="IK6VnQprMEybY1F7B30jgw" DesignTimeRectangle="974, 475, 274, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-label='Date,*' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Date, 14 Aug' tag='BUTTON' type='button' class='uitk-fake-input uitk-form-field-trigger' aaname='14 Aug' check:innerText='14 Aug' /&gt;" Guid="73750441-687c-40ff-b85c-0bd9d82e57bc" ImageBase64="" InformativeScreenshot="7a81c341cb0fe8fed168f6249ee9d5de.png" Reference="oghGY3lEJESxLaOejJVMcA/mntFQT8y5EqDLdRvsXorsQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Label'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" CVScreenId="fe634e5a-271d-4170-8b8a-d7b6b3bef614" CvTextArea="1072, 659, 12, 17" CvType="AnyWordGroup" DesignTimeRectangle="1065, 654, 28, 28" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='{0}' tag='DIV' /&gt;&quot;, str_FirstDate)]" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='uitk-date-number uitk-date-number-default uitk-type-300 uitk-type-regular' /&gt;" Guid="4fa152ff-8c90-4bc6-b894-91b1de9e8f06" ImageBase64="" InformativeScreenshot="72cb18c2914f79630968c5609c036e3a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Done'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="B_yzPSva-0efWHwdNRPpBA" DesignTimeRectangle="1774, 971, 89, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Done' parentid='FlightSearchForm_ONE_WAY' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Done' parentid='FlightSearchForm_ONE_WAY' tag='BUTTON' type='button' class='uitk-button uitk-button-medium uitk-button-has-text uitk-button-primary uitk-layout-flex-item' check:innerText='Done' /&gt;" Guid="3af90ca7-cd81-4d5f-9832-dd3c6a652983" ImageBase64="" InformativeScreenshot="3d3c691a81f6f2e82f686549b9051940.png" Reference="oghGY3lEJESxLaOejJVMcA/Rvm9uyD1y0yX5ciG6qjBmA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '1 traveler'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" DesignTimeRectangle="1265, 530, 297, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aria-label='Travelers, 1 traveler' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Travelers, 1 traveler' tag='BUTTON' type='button' class='uitk-menu-trigger open-traveler-picker-observer-root uitk-fake-input uitk-form-field-trigger' aaname='1 traveler' check:innerText='1 traveler' /&gt;" Guid="d42e1786-5aa3-4763-8461-0b353a0486aa" InformativeScreenshot="b40b38870ba3a271ed1060041450e841.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterAdult &lt; int_Adults]" DisplayName="While loop for Adults" sap:VirtualizedContainerService.HintSize="529.6,791.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,644.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Increase the'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" CVScreenId="451a9c9b-f856-44a9-9c99-879287cca511" CvTextArea="1494, 651, 15, 16" CvTextArgument="+" CvType="Text" DesignTimeRectangle="1487, 650, 30, 20" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl aria-label='Increase the number of adults' aria-role='img' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Increase the number of adults' aria-role='img' tag='svg' type='' class='uitk-icon uitk-step-input-icon' aaname='' check:text='Increase the number of adults' /&gt;" Guid="0d89156c-dd02-46de-b302-43010a38b194" InformativeScreenshot="662e60416e7613abd4e07604f2f39994.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Done'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" DesignTimeRectangle="1442, 920, 90, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='travelers_selector_done_button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='travelers_selector_done_button' tag='BUTTON' type='button' class='uitk-button uitk-button-medium uitk-button-has-text uitk-button-primary' aaname='Done' check:innerText='Done' /&gt;" Guid="a483b119-a057-4cee-97db-3e1009d9c43a" InformativeScreenshot="c07278221b9ed8f6f753ef9105daa828.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_CounterAdult]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[int_CounterAdult + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterChild &lt; int_Children]" DisplayName="While loop for Child" sap:VirtualizedContainerService.HintSize="529.6,755.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,608.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Increase the'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" DesignTimeRectangle="1487, 720, 30, 20" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl aria-label='Increase the number of children' aria-role='img' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Increase the number of children' aria-role='img' tag='svg' type='' class='uitk-icon uitk-step-input-icon' aaname='' check:text='Increase the number of children' /&gt;" Guid="ca5ff3ee-cb43-4c7f-9e3f-93044bb28fdd" ImageBase64="" InformativeScreenshot="1eec591060ddf254c1793c6c4ae4925a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NSelectItem DisplayName="Select Item 'SELECT age-traveler_sel…'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="2" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="17">
+                        <x:String></x:String>
+                        <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>4</x:String>
+                        <x:String>5</x:String>
+                        <x:String>6</x:String>
+                        <x:String>7</x:String>
+                        <x:String>8</x:String>
+                        <x:String>9</x:String>
+                        <x:String>10</x:String>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                        <x:String>17</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" DesignTimeRectangle="1123, 742, 399, 60" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='age-traveler_selector_children_age_selector-0' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='age-traveler_selector_children_age_selector-*' tag='SELECT' type='' class='uitk-field-select' aaname='Child * age' /&gt;" Guid="bcfc4cbb-537c-4673-8798-ac3ccbe0e040" ImageBase64="" InformativeScreenshot="2c6e583d163159793f5f6930b6444a8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1138, 760, 346, 25" FullSelectorArgument="&lt;webctrl aaname='Child 1 age' class='uitk-field-label' parentid='FlightSearchForm_ONE_WAY' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Child * age' class='uitk-field-label' parentid='FlightSearchForm_ONE_WAY' tag='DIV' type='' check:innerText='Child 1 age *' /&gt;" Guid="0b49ca24-5be1-4b36-a6b3-af1512f807f6" ImageBase64="" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_CounterChild]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[int_CounterChild + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InterruptibleWhile>
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterInfant &lt; int_Infant]" DisplayName="While" sap:VirtualizedContainerService.HintSize="529.6,755.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+              <ui:InterruptibleWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,608.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Increase the'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" DesignTimeRectangle="1482, 892, 40, 40" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='uitk-step-input-button' idx='8' parentid='FlightSearchForm_ONE_WAY' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='uitk-step-input-button' type='' parentid='FlightSearchForm_ONE_WAY' tag='SPAN' aaname='' check:text='Increase the number of infants in seat' /&gt;" Guid="c7e6b276-8406-4cdc-b664-4212ac95a8b9" InformativeScreenshot="3c060253a29b2a114ab478a9bed3dc75.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NSelectItem DisplayName="Select Item 'Infant 1 age *'" sap:VirtualizedContainerService.HintSize="433.6,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="0" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="3">
+                        <x:String></x:String>
+                        <x:String>0</x:String>
+                        <x:String>1</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.expedia.co.in/" DesignTimeRectangle="1123, 782, 399, 60" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='age-traveler_selector_infant_age_selector-0' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='age-traveler_selector_infant_age_selector-*' tag='SELECT' type='' class='uitk-field-select' aaname='Infant * age' /&gt;" Guid="01bdd232-91f1-4862-80f8-f033565312ba" ImageBase64="" InformativeScreenshot="908fcb3fa7eedfbf6fc030b6546017d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1138, 800, 346, 25" FullSelectorArgument="&lt;webctrl aaname='Infant 1 age' class='uitk-field-label' parentid='FlightSearchForm_ONE_WAY' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Infant * age' class='uitk-field-label' parentid='FlightSearchForm_ONE_WAY' tag='DIV' type='' check:innerText='Infant 1 age *' /&gt;" Guid="281b56fb-0990-4d79-b2fb-9299e2ce8f9d" ImageBase64="" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_CounterInfant]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[int_CounterInfant + 1]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ui:InterruptibleWhile.Body>
+            </ui:InterruptibleWhile>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Done'" sap:VirtualizedContainerService.HintSize="529.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" DesignTimeRectangle="1442, 920, 90, 45" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='travelers_selector_done_button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='travelers_selector_done_button' tag='BUTTON' type='button' class='uitk-button uitk-button-medium uitk-button-has-text uitk-button-primary' aaname='Done' check:innerText='Done' /&gt;" Guid="b43bcb12-8000-4a9a-8760-f177483be21d" InformativeScreenshot="c07278221b9ed8f6f753ef9105daa828.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="529.6,216.8" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22a97a01-4b8a-45ac-9021-d6ed20ad7696" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.expedia.com/" ContentHash="iszG2HRp5kGjIPdOvw59ew" DesignTimeRectangle="1577, 475, 102, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='search_button' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search_button' tag='BUTTON' type='submit' class='uitk-button uitk-button-large uitk-button-has-text uitk-button-primary' aaname='Search' check:innerText='Search' /&gt;" Guid="786860b0-c743-46cc-8acb-358297541b84" ImageBase64="" InformativeScreenshot="f2cf9951079fd39a768178ce05b5a6df.png" Reference="oghGY3lEJESxLaOejJVMcA/ZhsIcK1_TESmKTlKwZ88XA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp;amp; More' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="vMmh8fZwA0COkaeKmLD9hA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGsSURBVDhPpZPNLgNRHMU9QSMhGl87tIhK7kyqM7NBqI+FsGms2HkBL1BrXoEHsPWVSBASy6JE4nvBgoikFUKQzvE/V6etpJ1ILE5m7v3f85tz7/1PVe5SBURzokcR/iiupSdAAF/eRbqIa3+5VwUIPUkCHjjhij7PFc63DBytm0iXEedv9w0PQN0T4HLweaawOB9FV8RGS8hBa7iotnYb4Q5bP0fiFu4Egp8kOQJ0tNSKicSEhaEBC8ODRY0OWYh02wg2Owg2OQgJ5HjD1B5+XAOot1OF7JGB57Qq6PVEYW/ZhG3ZqGsUgEDCnRUAFA/IE24UDtdM9PdaqG1wNKRLkoRkKxUBnlg8WDXRJ+aaekdDdiUJ988z8QXw66VmPpnkRbbDM/EF0PwhtzE9GUN13Y+ZMG4nK2fiC/iSHsgcGnhKGUjO9miINstCgn0BHFzuGBgbtTAzFdMQJqGRdQ8QlyvmlV5sSx+UAFwOTjdNKMPWECbxzB4gI1ecGLewtBDVafM13Ui6ldkHhDBJyYKCWGez6WTFed3KhZ+JSfLRysr9XaNnjoB//M4q8A3mjqnICHwMtAAAAABJRU5ErkJggg==" InformativeScreenshot="b5cf791e8a2f1d50ab7dc1e14e62e710.jpg" Reference="oghGY3lEJESxLaOejJVMcA/ZCokVS_6l0OqinOUKFQh6g" Selector="&lt;html app='chrome.exe' title='Expedia Travel: Vacations, Cheap Flights, Airline Tickets &amp;amp; Airfares' /&gt;" Title="Expedia Travel: Vacation Homes, Hotels, Car Rentals, Flights &amp; More" Url="https://www.expedia.co.in/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
