@@ -151,7 +151,7 @@
                       <OutArgument x:TypeArguments="x:String">[str_FlyingFrom]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying From").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("From").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -159,7 +159,7 @@
                       <OutArgument x:TypeArguments="x:String">[str_FlyingTo]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying To").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("To").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">

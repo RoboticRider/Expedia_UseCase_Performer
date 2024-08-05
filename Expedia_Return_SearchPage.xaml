@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1831,5481</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1831,6192</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Expedia_Performer_Return_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -48,6 +48,8 @@
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Semantic.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -110,40 +112,37 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Expedia_Performer_Return" sap:VirtualizedContainerService.HintSize="688,5416" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Expedia_Performer_Return" sap:VirtualizedContainerService.HintSize="688,6127" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Expedia Travel Vacations, Cheap Flight(1)" sap:VirtualizedContainerService.HintSize="626,5328" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="36b5d044-5b56-468e-ac70-89fb6c40e7c8" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Expedia Travel Vacations, Cheap Flight(1)" sap:VirtualizedContainerService.HintSize="626,6039" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="36b5d044-5b56-468e-ac70-89fb6c40e7c8" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5088" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5759" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Name="int_Adult" />
               <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterAdult" />
-              <Variable x:TypeArguments="x:Int32" Name="int_Child" />
               <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterChild" />
-              <Variable x:TypeArguments="x:Int32" Name="int_Infant" />
               <Variable x:TypeArguments="x:Int32" Default="0" Name="int_CounterInfant" />
               <Variable x:TypeArguments="x:String" Name="str_FlyingFrom" />
               <Variable x:TypeArguments="x:String" Name="str_FlyingTo" />
               <Variable x:TypeArguments="x:String" Name="str_DepartureDate" />
               <Variable x:TypeArguments="x:String" Name="str_ReturnDate" />
-              <Variable x:TypeArguments="x:String" Name="testStringAdult" />
-              <Variable x:TypeArguments="x:String" Name="testStringChild" />
-              <Variable x:TypeArguments="x:String" Name="testStringInfant" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Child" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Adult" />
+              <Variable x:TypeArguments="x:Int32" Name="int_Infant" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,334" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,334" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -151,7 +150,7 @@
                       <OutArgument x:TypeArguments="x:String">[str_FlyingFrom]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying From").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("From").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -159,31 +158,7 @@
                       <OutArgument x:TypeArguments="x:String">[str_FlyingTo]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Flying To").ToString]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Int32">[int_Adult]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Adult").ToString), CInt(in_TransactionItem.SpecificContent("Adult").ToString), 0)]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Int32">[int_Child]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Child").ToString), CInt(in_TransactionItem.SpecificContent("Child").ToString), 0)]</InArgument>
-                    </ui:AssignOperation.Value>
-                  </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
-                    <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:Int32">[int_Infant]</OutArgument>
-                    </ui:AssignOperation.To>
-                    <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Infant").ToString), CInt(in_TransactionItem.SpecificContent("Infant").ToString), 0)]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("To").ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
@@ -191,7 +166,7 @@
                       <OutArgument x:TypeArguments="x:String">[str_DepartureDate]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Departing Date").ToString.Split("/"c)(0).TrimStart("0"c)]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Departing Date").ToString.Split("/"c)(1).TrimStart("0"c)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -199,7 +174,31 @@
                       <OutArgument x:TypeArguments="x:String">[str_ReturnDate]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Return Date").ToString.Split("/"c)(0).TrimStart("0"c)]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Return Date").ToString.Split("/"c)(1).TrimStart("0"c)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Child]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Child").ToString), CInt(in_TransactionItem.SpecificContent("Child").ToString), 0)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Adult]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Child").ToString), CInt(in_TransactionItem.SpecificContent("Child").ToString), 0)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Int32">[int_Infant]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Int32">[If(Not String.IsNullOrEmpty(in_TransactionItem.SpecificContent("Infant").ToString), CInt(in_TransactionItem.SpecificContent("Infant").ToString), 0)]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                 </scg:List>
@@ -385,9 +384,9 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterAdult &lt; int_Adult]" DisplayName="While loop for Adults" sap:VirtualizedContainerService.HintSize="530,563" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While loop for Adults" sap:VirtualizedContainerService.HintSize="530,564" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,417" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,418" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -408,7 +407,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[int_CounterAdult]</OutArgument>
                     </Assign.To>
@@ -418,6 +417,9 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="int_CounterAdult &lt; int_Adult" />
+              </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -425,9 +427,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterChild &lt; int_Child]" DisplayName="While loop for Child" sap:VirtualizedContainerService.HintSize="530,752" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While loop for Child" sap:VirtualizedContainerService.HintSize="530,753" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,606" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,607" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -480,7 +482,7 @@
                       </uix:TargetAnchorable>
                     </uix:NSelectItem.Target>
                   </uix:NSelectItem>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[int_CounterChild]</OutArgument>
                     </Assign.To>
@@ -490,6 +492,9 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="int_CounterChild &lt; int_Child" />
+              </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -497,9 +502,9 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[int_CounterInfant &lt; int_Infant]" DisplayName="While loop for Infant" sap:VirtualizedContainerService.HintSize="530,84" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While loop for Infant" sap:VirtualizedContainerService.HintSize="530,753" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_5">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,606" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,607" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -538,7 +543,7 @@
                       </uix:TargetAnchorable>
                     </uix:NSelectItem.Target>
                   </uix:NSelectItem>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,104" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[int_CounterInfant]</OutArgument>
                     </Assign.To>
@@ -548,9 +553,12 @@
                   </Assign>
                 </Sequence>
               </ui:InterruptibleWhile.Body>
+              <ui:InterruptibleWhile.Condition>
+                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="int_CounterInfant &lt; int_Infant" />
+              </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>

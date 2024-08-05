@@ -214,7 +214,10 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <FlowDecision.True>
-                  <FlowDecision x:Name="__ReferenceID1" Condition="[TranItem.SpecificContent(&quot;Multi City&quot;) Is Nothing And TranItem.SpecificContent(&quot;Return Date&quot;) Is Nothing And TranItem.SpecificContent(&quot;Multi City Date&quot;) Is Nothing]" DisplayName="Checking One Way" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                  <FlowDecision x:Name="__ReferenceID1" DisplayName="Checking One Way" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                    <FlowDecision.Condition>
+                      <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Multi City&quot;).ToString) AndAlso Not String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Return Date&quot;).ToString) AndAlso Not String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Multi City Date&quot;).ToString)" />
+                    </FlowDecision.Condition>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -268,7 +271,10 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:LogMessage>
                         <FlowStep.Next>
-                          <FlowDecision x:Name="__ReferenceID4" Condition="[TranItem.SpecificContent(&quot;Multi City&quot;) is Nothing And TranItem.SpecificContent(&quot;Multi City Date&quot;) is Nothing And TranItem.SpecificContent(&quot;Return Date&quot;) isNot Nothing]" DisplayName="Checking Return Date" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                          <FlowDecision x:Name="__ReferenceID4" DisplayName="Checking Return Date" sap:VirtualizedContainerService.HintSize="59,59" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                            <FlowDecision.Condition>
+                              <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="Not String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Return Date&quot;).ToString) AndAlso String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Multi City&quot;).ToString) AndAlso String.IsNullOrEmpty(TranItem.SpecificContent(&quot;Multi City Date&quot;).ToString)" />
+                            </FlowDecision.Condition>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
